@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="120dp"
+    android:layout_height="200dp"
+    android:background="@drawable/gallery_item_background" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/title"
+            android:layout_width="match_parent"
+            android:layout_height="20dp"
+            android:text="SAMPLE"
+            android:textAlignment="center"
+            android:textColor="@color/white"
+            android:textStyle="bold" />
+
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="match_parent"
+            android:layout_height="150dp"
+            tools:srcCompat="@tools:sample/avatars"
+            android:scaleType="centerCrop"
+            android:adjustViewBounds="true"
+            />
+
+        <TextView
+            android:id="@+id/description"
+            android:layout_width="match_parent"
+            android:layout_height="31dp"
+            android:singleLine="true"
+            android:text="This is some long description example to simulate multiline"
+            android:textAlignment="center"
+            android:textColor="@color/white"
+            android:textSize="9dp" />
+    </LinearLayout>
+
+</FrameLayout>
