@@ -17,15 +17,17 @@ public class TermsPresenter implements ITermsPresenter {
     //Interface ITermsPresenter
     @Override
     public void privateButtonPressed() {
-
+        this.view.showSpinner();
         SessionDataSource.shared.SignIn(new Callback() {
             @Override
             public void onSuccess(Object responseObject) {
                 TermsPresenter.this.view.navigateToPrivate();
+                TermsPresenter.this.view.hideSpinner();
             }
 
             @Override
             public void onError() {
+                TermsPresenter.this.view.hideSpinner();
                 TermsPresenter.this.view.showError("Can't create a valid firebase user");
             }
         });

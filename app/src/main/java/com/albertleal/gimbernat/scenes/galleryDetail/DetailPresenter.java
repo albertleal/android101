@@ -1,8 +1,8 @@
-package com.albertleal.gimbernat.scenes.detail;
+package com.albertleal.gimbernat.scenes.galleryDetail;
 
 import com.albertleal.gimbernat.helpers.Callback;
 import com.albertleal.gimbernat.models.AssetModel;
-import com.albertleal.gimbernat.scenes.detail.interfaces.IDetailPresenter;
+import com.albertleal.gimbernat.scenes.galleryDetail.interfaces.IDetailPresenter;
 
 public class DetailPresenter implements IDetailPresenter {
 

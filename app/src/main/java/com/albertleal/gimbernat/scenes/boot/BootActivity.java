@@ -4,8 +4,10 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.widget.ProgressBar;
 
 import com.albertleal.gimbernat.R;
+import com.albertleal.gimbernat.datasources.SessionDataSource;
 import com.albertleal.gimbernat.scenes.boot.interfaces.IBootActivity;
 import com.albertleal.gimbernat.scenes.gallery.GalleryActivity;
 import com.albertleal.gimbernat.scenes.terms.TermsActivity;
@@ -16,11 +18,14 @@ public class BootActivity extends AppCompatActivity implements IBootActivity {
     //MVP Variables
     private BootPresenter presenter;
 
+
     //Lifecycle
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_boot);
+
+        SessionDataSource.shared.signOut();
 
         //Init the presenter
         this.presenter = new BootPresenter(this);

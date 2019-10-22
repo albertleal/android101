@@ -6,6 +6,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ProgressBar;
 import android.widget.Toast;
 
 import com.albertleal.gimbernat.R;
@@ -19,6 +20,8 @@ public class TermsActivity extends AppCompatActivity implements ITermsActivity {
 
     //View outlets
     private Button privateButton;
+    //Setting the UI
+    private ProgressBar spinner;
 
     //Lifecycle
     @Override
@@ -26,15 +29,16 @@ public class TermsActivity extends AppCompatActivity implements ITermsActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_terms);
 
+        //init the UI
+        this.privateButton = this.findViewById(R.id.termsAcceptsButton);
+        this.spinner = (ProgressBar)findViewById(R.id.progressBar);
+
+        this.hideSpinner();
 
         //Init the presenter
         this.presenter = new TermsPresenter(this);
 
-        //init the UI
-        this.privateButton = this.findViewById(R.id.termsAcceptsButton);
-
         //Setup events
-
         this.privateButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -52,6 +56,26 @@ public class TermsActivity extends AppCompatActivity implements ITermsActivity {
                 Intent intent = new Intent(TermsActivity.this, GalleryActivity.class);
                 intent.setAction(Intent.ACTION_VIEW);
                 TermsActivity.this.startActivity(intent);
+            }
+        });
+    }
+
+    @Override
+    public void showSpinner() {
+        TermsActivity.this.runOnUiThread(new Runnable() {
+            @Override
+            public void run() {
+                TermsActivity.this.spinner.setVisibility(View.VISIBLE);
+            }
+        });
+    }
+
+    @Override
+    public void hideSpinner() {
+        TermsActivity.this.runOnUiThread(new Runnable() {
+            @Override
+            public void run() {
+                TermsActivity.this.spinner.setVisibility(View.GONE);
             }
         });
     }

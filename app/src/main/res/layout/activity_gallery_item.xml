@@ -15,7 +15,7 @@
             android:id="@+id/title"
             android:layout_width="match_parent"
             android:layout_height="20dp"
-            android:text="SAMPLE"
+            android:text="@string/sample_short"
             android:textAlignment="center"
             android:textColor="@color/white"
             android:textStyle="bold" />
@@ -34,7 +34,7 @@
             android:layout_width="match_parent"
             android:layout_height="31dp"
             android:singleLine="true"
-            android:text="This is some long description example to simulate multiline"
+            android:text="@string/sample_long"
             android:textAlignment="center"
             android:textColor="@color/white"
             android:textSize="9dp" />

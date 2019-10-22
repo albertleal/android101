@@ -1,9 +1,9 @@
-package com.albertleal.gimbernat.scenes.detail;
+package com.albertleal.gimbernat.scenes.galleryDetail;
 
 import com.albertleal.gimbernat.datasources.AssetsDataSource;
 import com.albertleal.gimbernat.helpers.Callback;
 import com.albertleal.gimbernat.models.AssetModel;
-import com.albertleal.gimbernat.scenes.detail.interfaces.IDetailInteractor;
+import com.albertleal.gimbernat.scenes.galleryDetail.interfaces.IDetailInteractor;
 
 public class DetailInteractor implements IDetailInteractor {
 

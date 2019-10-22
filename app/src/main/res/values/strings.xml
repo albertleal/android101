@@ -1,3 +1,9 @@
 <resources>
     <string name="app_name">Gimbernat</string>
+    <string name="terms_and_conditions">this is a sample text  with multiple  line   that ends</string>
+    <string name="accept">Accept</string>
+    <string name="sample_long">This is some long description example to simulate multiline</string>
+    <string name="sample_short">SAMPLE</string>
+    <string name="button_one">Share</string>
+    <string name="button_two">Find More</string>
 </resources>

@@ -33,7 +33,7 @@ public class GalleryPresenter extends BaseAdapter implements IGalleryPresenter  
     //Interface IGalleryPresenter
     @Override
     public void subscribeForAssets() {
-
+        this.view.showSpinner();
         this.interactor.subscribeForAssets(new Callback() {
 
             @Override
@@ -43,6 +43,7 @@ public class GalleryPresenter extends BaseAdapter implements IGalleryPresenter  
                 GalleryPresenter.this.items = assets;
                 //Notify the view that the content is ready to be used or updated
                 GalleryPresenter.this.view.setAdapterForGrid();
+                GalleryPresenter.this.view.hideSpinner();
             }
 
             @Override

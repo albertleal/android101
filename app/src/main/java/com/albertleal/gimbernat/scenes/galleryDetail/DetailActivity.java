@@ -1,4 +1,4 @@
-package com.albertleal.gimbernat.scenes.detail;
+package com.albertleal.gimbernat.scenes.galleryDetail;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -8,7 +8,7 @@ import android.widget.TextView;
 
 import com.albertleal.gimbernat.R;
 import com.albertleal.gimbernat.models.AssetModel;
-import com.albertleal.gimbernat.scenes.detail.interfaces.IDetailActivity;
+import com.albertleal.gimbernat.scenes.galleryDetail.interfaces.IDetailActivity;
 import com.squareup.picasso.Picasso;
 
 
