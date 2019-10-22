@@ -83,7 +83,7 @@ public class GalleryPresenter extends BaseAdapter implements IGalleryPresenter  
         final AssetModel asset = getItem(position);
         //Setting the texts
         ((TextView) convertView.findViewById(R.id.description)).setText(asset.description);
-        ((TextView) convertView.findViewById(R.id.title)).setText(asset.id);
+        ((TextView) convertView.findViewById(R.id.title)).setText(asset.title);
 
         //Using Picasso to cache the image
         Picasso.get().load(asset.url).into((ImageView) convertView.findViewById(R.id.imageView));

@@ -74,11 +74,13 @@ public class AssetsDataSource {
     private AssetModel snapshotToAssetModel(DataSnapshot item_snapshot) {
 
         String id = item_snapshot.getKey().toString();
-        Integer category = Integer.parseInt(item_snapshot.child("category").getValue().toString());
-        String description = item_snapshot.child("description").getValue().toString();
-        String url = item_snapshot.child("url").getValue().toString();
 
-        return new AssetModel(id, url, description, category);
+        Integer category = item_snapshot.child("category").exists() ? Integer.parseInt(item_snapshot.child("category").getValue().toString()) : 0;
+        String description = item_snapshot.child("description").exists() ? item_snapshot.child("description").getValue().toString() : "";
+        String url = item_snapshot.child("url").exists() ? item_snapshot.child("url").getValue().toString() : "";
+        String title = item_snapshot.child("title").exists() ? item_snapshot.child("title").getValue().toString() : id;
+
+        return new AssetModel(id, url, title, description, category);
 
     }
 }

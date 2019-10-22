@@ -18,7 +18,8 @@
             android:text="@string/sample_short"
             android:textAlignment="center"
             android:textColor="@color/white"
-            android:textStyle="bold" />
+            android:textStyle="bold"
+            android:paddingHorizontal="8dp"/>
 
         <ImageView
             android:id="@+id/imageView"
@@ -37,7 +38,8 @@
             android:text="@string/sample_long"
             android:textAlignment="center"
             android:textColor="@color/white"
-            android:textSize="9dp" />
+            android:textSize="9dp"
+            android:paddingHorizontal="8dp"/>
     </LinearLayout>
 
 </FrameLayout>
