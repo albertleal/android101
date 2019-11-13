@@ -1,9 +1,15 @@
 <resources>
     <string name="app_name">Gimbernat</string>
-    <string name="terms_and_conditions">this is a sample text\nwith multiple\nline\nthat ends</string>
+    <string name="terms_and_conditions">
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum consectetur fermentum quam, vel facilisis lacus ultricies convallis. Donec pulvinar nec dolor nec ornare. In id bibendum velit, sed blandit leo. Praesent at arcu sed risus tempus tempus id non mi. Nullam lacinia et arcu sit amet sagittis. Proin lacinia lectus nec condimentum egestas. Praesent ut pulvinar augue. Nullam elementum ultrices iaculis. Suspendisse vitae justo non quam consectetur egestas. Vestibulum aliquam odio et cursus tempor. Quisque varius viverra volutpat. Vestibulum facilisis turpis ac dictum consequat. Donec a feugiat augue. Donec rhoncus nulla sed libero fermentum vehicula.\n
+        Cras varius nulla nulla, eu scelerisque neque aliquet ut. In tincidunt et mi eleifend ultricies. Nulla lacus turpis, venenatis et lectus eu, dignissim dictum turpis. Etiam commodo ligula a ex ultricies vestibulum. In hac habitasse platea dictumst. Nam at diam at arcu elementum mollis. Proin consequat elementum lectus. Nullam tincidunt luctus dui vitae tempor. Aliquam vehicula, nisi eu blandit ultricies, odio metus pulvinar est, eu congue tortor tortor at nulla. Aliquam laoreet dignissim vestibulum. Nunc dolor quam, efficitur ac tempus ac, gravida sit amet urna. Aliquam erat volutpat. Duis consectetur, turpis vitae pharetra luctus, ipsum urna tempor justo, eu convallis enim purus at lectus. Nam a arcu sapien. Aliquam erat volutpat.\n
+        Mauris eget mi ipsum. Praesent gravida venenatis diam ac tristique. Praesent ac posuere mauris. Nulla facilisi. Nullam in sem quis nisi dapibus commodo a et nulla. Nulla at ipsum in elit iaculis pulvinar. Donec eu placerat enim.\n
+        Aenean vehicula justo et mauris semper lobortis id a diam. Ut feugiat dolor sapien, non molestie elit porttitor vel. Aliquam et turpis bibendum, condimentum orci id, venenatis quam. In commodo id nisl a ornare. Aliquam at bibendum est. Morbi aliquam felis massa, eu mattis urna consequat volutpat. Fusce quis diam eu libero posuere sagittis non sed magna. Interdum et malesuada fames ac ante ipsum primis in faucibus. Phasellus orci libero, pulvinar id semper quis, vehicula et sapien. Quisque hendrerit dapibus consectetur. Mauris eu nulla at leo rhoncus tempus. Morbi risus lacus, egestas vitae mauris in, tincidunt condimentum ligula.
+    </string>
     <string name="accept">Accept</string>
     <string name="sample_long">This is some long description example to simulate multiline</string>
     <string name="sample_short">SAMPLE</string>
     <string name="button_one">Share</string>
-    <string name="button_two">Find More</string>
+    <string name="button_two">Find on a Map</string>
+    <string name="title_activity_maps">Map</string>
 </resources>

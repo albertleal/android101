@@ -1,5 +1,6 @@
 package com.albertleal.gimbernat.scenes.galleryDetail;
 
+import com.albertleal.gimbernat.datasources.AssetsDataSource;
 import com.albertleal.gimbernat.helpers.Callback;
 import com.albertleal.gimbernat.models.AssetModel;
 import com.albertleal.gimbernat.scenes.galleryDetail.interfaces.IDetailPresenter;
@@ -8,27 +9,30 @@ public class DetailPresenter implements IDetailPresenter {
 
     //MVP Variables
     private DetailActivity view;
-    private DetailInteractor interactor;
+    private AssetModel assetModel;
 
     public DetailPresenter(DetailActivity view) {
         this.view = view;
-        this.interactor = new DetailInteractor();
     }
 
     //Interface IDetailPresenter
     @Override
     public void getDetailData(String id) {
-        this.interactor.getSingleAsset(id, new Callback() {
-            @Override
-            public void onSuccess(Object responseObject) {
-                AssetModel assetModel = (AssetModel) responseObject;
-                DetailPresenter.this.view.fillDetailInformation(assetModel);
-            }
+        AssetModel asset = AssetsDataSource.shared.getById(id);
 
-            @Override
-            public void onError() {
-                //Todo Show error
-            }
-        });
+        if (asset != null) {
+            DetailPresenter.this.assetModel = asset;
+            DetailPresenter.this.view.fillDetailInformation(DetailPresenter.this.assetModel);
+        }else {
+            //Todo Show error
+        }
     }
+
+    @Override
+    public void navigateToMap() {
+        if(assetModel != null) {
+            DetailPresenter.this.view.navigateToMap(DetailPresenter.this.assetModel);
+        }
+    }
+
 }

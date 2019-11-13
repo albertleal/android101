@@ -4,4 +4,5 @@ import com.albertleal.gimbernat.models.AssetModel;
 
 public interface  IDetailActivity {
     void fillDetailInformation(AssetModel asset);
+    void navigateToMap(AssetModel asset);
 }

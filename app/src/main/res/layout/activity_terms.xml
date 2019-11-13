@@ -7,7 +7,7 @@
     tools:context=".scenes.terms.TermsActivity">
 
     <TextView
-        android:id="@+id/editText"
+        android:id="@+id/termsText"
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:layout_marginStart="16dp"
@@ -19,6 +19,7 @@
         android:focusable="false"
         android:gravity="start|top"
         android:inputType="textMultiLine"
+        android:scrollbars="vertical"
         android:text="@string/terms_and_conditions"
         app:layout_constraintBottom_toTopOf="@+id/termsAcceptsButton"
         app:layout_constraintEnd_toEndOf="parent"

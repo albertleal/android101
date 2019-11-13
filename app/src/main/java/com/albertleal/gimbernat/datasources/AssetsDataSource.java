@@ -41,7 +41,8 @@ public class AssetsDataSource {
 
     private void fetch(final  Boolean subscribeCallback, final Callback callback){
 
-        final DatabaseReference databaseReference = FirebaseDatabase.getInstance().getReference().child("content/assets");
+        final DatabaseReference databaseReference =
+                FirebaseDatabase.getInstance().getReference().child("content/assets");
 
         ValueEventListener eventListener = new ValueEventListener() {
             @Override
@@ -80,7 +81,11 @@ public class AssetsDataSource {
         String url = item_snapshot.child("url").exists() ? item_snapshot.child("url").getValue().toString() : "";
         String title = item_snapshot.child("title").exists() ? item_snapshot.child("title").getValue().toString() : id;
 
-        return new AssetModel(id, url, title, description, category);
+        String latitude = item_snapshot.child("latitude").exists() ? item_snapshot.child("latitude").getValue().toString() : "42.256014";
+        String longitude = item_snapshot.child("longitude").exists() ? item_snapshot.child("longitude").getValue().toString() : "3.131477";
+
+
+        return new AssetModel(id, url, title, description, category, latitude, longitude);
 
     }
 }

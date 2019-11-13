@@ -6,12 +6,16 @@ public class AssetModel {
     public String description;
     public String title;
     public int category;
+    public String latitude;
+    public String longitude;
 
-    public AssetModel(String id, String url, String title, String description, int category) {
+    public AssetModel(String id, String url, String title, String description, int category, String latitude, String longitude) {
         this.id = id;
         this.url = url;
         this.description = description;
         this.title = title;
         this.category = category;
+        this.latitude = latitude;
+        this.longitude = longitude;
     }
 }
